@@ -1,10 +1,18 @@
 {
   "version": "1.0.0",
-  "description": "",
-  "authors": [],
-  "tags": [],
-  "projectUrl": "",
-  "licenseUrl": "",
+  "description": "An example C# application.",
+  "authors": [
+    "Kasper Kronborg Isager <kasperisager@gmail.com>"
+  ],
+  "tags": [
+    "C#",
+    "DNX",
+    "ASP.NET",
+    "Boilerplate",
+    "Example"
+  ],
+  "projectUrl": "https://github.com/kasperisager/csharp-boilerplate",
+  "licenseUrl": "https://github.com/kasperisager/csharp-boilerplate/blob/master/LICENSE.md",
 
   "dependencies": {},
 

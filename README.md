@@ -22,6 +22,7 @@ Folder / File | Description
 ## Requirements
 
 - [DNVM](https://github.com/aspnet/dnvm) - .NET SDK Manager
+- [Doxygen](http://www.stack.nl/~dimitri/doxygen/) - Documentation generator
 
 ## Installation
 
@@ -31,6 +32,7 @@ First off, make sure you have [Homebrew](http://brew.sh/) installed. Then instal
 
 ```sh
 $ brew install mono
+$ brew install doxygen
 $ brew install aspnet/dnx/dnvm
 ```
 

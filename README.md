@@ -66,7 +66,7 @@ __`docs`__ - Generate API documentation using [Doxygen](http://www.stack.nl/~dim
 
 __`run`__ - Run applications using [DNX](https://github.com/aspnet/dnx).
 
-__`test`__ - Run test specifications using [DNX](https://github.com/aspnet/dnx).
+__`test`__ - Run test specifications using [DNX](https://github.com/aspnet/dnx) and [xUnit](http://xunit.github.io/).
 
 __`check`__ - Run static code analysis on built assemblies using [Gendarme](http://www.mono-project.com/docs/tools+libraries/tools/gendarme/).
 

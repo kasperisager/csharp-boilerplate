@@ -1,0 +1,22 @@
+# Don't check the contents of these folders into VCS. We're still interested in
+# checking the actual folder into VCS for documentation purposes, which is why
+# we don't outright ignore the folders themselves.
+build/**
+packages/**
+docs/**
+
+# Keep the .gitkeep files from the above folders to ensure that they're checked
+# into VCS without contents.
+!build/.gitkeep
+!packages/.gitkeep
+!docs/.gitkeep
+
+# Make sure that EXEs and DLLs from libraries are checked into VCS. This is in
+# case they're ignored globally.
+!lib/**/*.exe
+!lib/**/*.dll
+
+# Ignore DNX project dependency lock files by default. If you're interested in
+# collaborating with multiple authors on your project then you may not want to
+# ignore the lock files.
+*.lock.json

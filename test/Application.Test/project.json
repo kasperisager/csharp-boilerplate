@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+
+  "dependencies": {
+    "Application": "1.0.0",
+    "Xunit": "2.1.0-*",
+    "Xunit.Runner.Dnx": "2.1.0-*",
+    "Mono.Gendarme": "2.11.0"
+  },
+
+  "commands": {
+    "test": "Xunit.Runner.Dnx"
+  },
+
+  "frameworks": {
+    "dnx451": {}
+  }
+}

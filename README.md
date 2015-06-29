@@ -58,29 +58,17 @@ source dnvm.sh
 make [target]
 ```
 
-#### `packages`
+__`packages`__ - Install required [NuGet](https://www.nuget.org/) packages using [DNU](https://github.com/aspnet/Home/wiki/DNX-utility).
 
-Install required [NuGet](https://www.nuget.org/) packages using [DNU](https://github.com/aspnet/Home/wiki/DNX-utility).
+__`build`__ - Build assemblies for applications and test specifications using [DNU](https://github.com/aspnet/Home/wiki/DNX-utility).
 
-#### `build`
+__`docs`__ - Generate API documentation using [Doxygen](http://www.stack.nl/~dimitri/doxygen/).
 
-Build assemblies for applications and test specifications using [DNU](https://github.com/aspnet/Home/wiki/DNX-utility).
+__`run`__ - Run applications using [DNX](https://github.com/aspnet/dnx).
 
-#### `docs`
+__`test`__ - Run test specifications using [DNX](https://github.com/aspnet/dnx).
 
-Generate API documentation using [Doxygen](http://www.stack.nl/~dimitri/doxygen/).
-
-#### `run`
-
-Run applications using [DNX](https://github.com/aspnet/dnx).
-
-#### `test`
-
-Run test specifications using [DNX](https://github.com/aspnet/dnx).
-
-#### `check`
-
-Run static code analysis on built assemblies using [Gendarme](http://www.mono-project.com/docs/tools+libraries/tools/gendarme/).
+__`check`__ - Run static code analysis on built assemblies using [Gendarme](http://www.mono-project.com/docs/tools+libraries/tools/gendarme/).
 
 ---
 

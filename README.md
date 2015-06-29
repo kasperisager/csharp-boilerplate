@@ -50,6 +50,8 @@ source dnvm.sh
 
 ## Building
 
+The boilerplate includes a [Makefile](Makefile) for performing some common operations on the project source using the different binaries available in [DNVM](https://github.com/aspnet/dnvm). While you're absolutely free to ditch the build system and simply use binaries like `dnx` and `dnu` manually, it is recommended that you stick to the build system for the sake of consistency.
+
 > Windows users must install something similar to [MinGW](http://www.mingw.org/) in order to use `make`.
 
 ### Targets

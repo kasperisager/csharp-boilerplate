@@ -4,20 +4,18 @@
 
 Folder / File | Description
 --- | ---
-[`src/`](src) |
-[`src/Application/Program.cs`](src/Application/Program.cs) |
-[`src/Application/project.json`](src/Application/project.json) |
-[`test/`](test) |
-[`test/Application.Test/project.json`](test/Application.Test/project.json) |
-[`lib/`](lib) |
-[`build/`](build) |
-[`packages/`](packages) |
-[`config/`](config) |
-[`config/Doxyfile`](config/Doxyfile) |
-[`config/Gendarme.xml`](config/Gendarme.xml) |
-[`.editorconfig`](.editorconfig) |
-[`Makefile`](Makefile) |
-[`global.json`](global.json) |
+[`src/`](src) | This folder contains all the source code for your project.
+[`src/Application/Program.cs`](src/Application/Program.cs) | This class is the main entry point to your application and its `Main()` method will be executed when the application is run.
+[`src/Application/project.json`](src/Application/project.json) | This file is the manifest for your application and defines meta data as well as package and framework dependencies.
+[`test/`](test) | This folder contains all the test specifications for your project.
+[`test/Application.Test/project.json`](test/Application.Test/project.json) | This is the manifest for your test specification and works exactly like the application manifest.
+[`lib/`](lib) | This folder contains any third-party libraries not available via the package manager.
+[`build/`](build) | This folder contains all the built assemblies from your applications and test specifications.
+[`packages/`](packages) | This folder contains all packages installed by the package manager.
+[`config/`](config) | This folder contains all the configuration files required by things like the build system.
+[`.editorconfig`](.editorconfig) | This file describes the editor formatting settings to be used in editors and IDEs.
+[`Makefile`](Makefile) | This file describes all the build system targets available for your project.
+[`global.json`](global.json) | This file is the global project manifest and defines the different project sources and runtime frameworks.
 
 ## Requirements
 

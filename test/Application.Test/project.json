@@ -5,7 +5,7 @@
     "Application": "1.0.0",
     "Xunit": "2.1.0-*",
     "Xunit.Runner.Dnx": "2.1.0-*",
-    "Mono.Gendarme": "2.11.0"
+    "Mono.Gendarme": "2.11.0.20121120"
   },
 
   "commands": {

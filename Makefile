@@ -23,7 +23,8 @@ CONFIG = config
 DNX = dnx
 DNU = dnu
 
-# Framework targets.
+# Framework targets. These must match the frameworks defined in your project
+# files.
 FRAMEWORKS = dnx451
 
 # Gendarme configuration.
@@ -48,21 +49,33 @@ DOXYGEN_CONFIG = ${CONFIG}/Doxyfile
 # Dependencies:
 # `global.json` - The global DNX configuration file.
 # `{src,test}/**/project.json` - The individual DNX project manifests.
-${PACKAGES}: global.json ${SRC}/**/project.json ${TEST}/**/project.json
-	@${DNU} restore --quiet --parallel
+${PACKAGES}: global.json ${SRC}/*/project.json ${TEST}/*/project.json
+	@for project in {${SRC},${TEST}}/*; do \
+		${DNU} restore --quiet $$project; \
+	done
 
-# Build assemblies for applications and test specifications.
-#
-# This will loop through all top-level directories in the src and test folders
-# and build each of them using DNU.
+# Build application and test specification assemblies for debugging.
 #
 # Dependencies:
 # `packages` - The installed NuGet packages for all DNX projects.
 # `{src,test}/**/*` - Source and test files.
-${BUILD}: ${PACKAGES} ${SRC}/**/* ${TEST}/**/*
+${BUILD}/Debug: ${PACKAGES} ${SRC}/**/* ${TEST}/**/*
 	@for project in {${SRC},${TEST}}/*; do \
-		${DNU} build --quiet --out ${BUILD} $$project; \
+		${DNU} build --quiet --out ${BUILD} --configuration Debug $$project; \
 	done
+
+# Build application assemblies for release.
+#
+# Dependencies:
+# `packages` - The installed NuGet packages for all DNX projects.
+# `src/**/*` - Source files.
+${BUILD}/Release: ${PACKAGES} ${SRC}/**/*
+	@for project in ${SRC}/*; do \
+		${DNU} pack --quiet --out ${BUILD} --configuration Release $$project; \
+	done
+
+# Alias for building application assemblies for release.
+build: build/Release
 
 # Generate API documentation using Doxygen.
 #
@@ -89,9 +102,9 @@ test: ${PACKAGES}
 # Run static code analysis on built assemblies using Gendarme.
 #
 # Dependencies:
-# `build` - Built assemblies for applications and test specifications.
-check: ${BUILD}
+# `build/Debug` - Built application and test specification assemblies.
+check: ${BUILD}/Debug
 	@${GENDARME} ${BUILD}/Debug/${FRAMEWORKS}/*.dll --config ${GENDARME_CONFIG}
 
 # https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html
-.PHONY: run test check
+.PHONY: build run test check

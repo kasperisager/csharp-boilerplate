@@ -23,10 +23,6 @@ CONFIG = config
 DNX = dnx
 DNU = dnu
 
-# Framework targets. These must match the frameworks defined in your project
-# files.
-FRAMEWORKS = dnx451
-
 # Gendarme configuration.
 GENDARME = ${DNX} ${PACKAGES}/Mono.Gendarme/*/tools/gendarme.exe
 GENDARME_CONFIG = ${CONFIG}/Gendarme.xml
@@ -104,7 +100,7 @@ test: ${PACKAGES}
 # Dependencies:
 # `build/Debug` - Built application and test specification assemblies.
 check: ${BUILD}/Debug
-	@${GENDARME} ${BUILD}/Debug/${FRAMEWORKS}/*.dll --config ${GENDARME_CONFIG}
+	@${GENDARME} ${BUILD}/Debug/*/*.dll --config ${GENDARME_CONFIG}
 
 # https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html
 .PHONY: build run test check

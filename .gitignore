@@ -25,3 +25,4 @@ project.lock.json
 # IDE integrations described in the project wiki; you may want to add additional
 # ignores if authors on your project use different IDEs.
 .settings
+.atom-build.json

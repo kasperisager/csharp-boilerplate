@@ -50,7 +50,7 @@ source dnvm.sh
 
 ## Building
 
-> Windows users must install something similar to [MinGW](http://www.mingw.org/http://www.mingw.org/) in order to use `make`.
+> Windows users must install something similar to [MinGW](http://www.mingw.org/) in order to use `make`.
 
 ### Targets
 

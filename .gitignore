@@ -19,4 +19,9 @@ docs/**
 # Ignore DNX project dependency lock files by default. If you're interested in
 # collaborating with multiple authors on your project then you may not want to
 # ignore the lock files.
-*.lock.json
+project.lock.json
+
+# Ignore common IDE user preferences and whatnot. This is by default limited to
+# IDE integrations described in the project wiki; you may want to add additional
+# ignores if authors on your project use different IDEs.
+.settings

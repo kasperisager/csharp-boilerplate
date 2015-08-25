@@ -28,6 +28,8 @@ Folder / File | Description
 
 ### OS X
 
+> Official instructions: http://docs.asp.net/en/latest/getting-started/installing-on-mac.html
+
 First off, make sure you have [Homebrew](http://brew.sh/) installed. Then install the following packages:
 
 ```sh
@@ -44,9 +46,13 @@ source dnvm.sh
 
 ### Linux
 
-> TODO
+> Official instructions: http://docs.asp.net/en/latest/getting-started/installing-on-linux.html
+
+The easiest way to get started with the boilerplate on Linux is using Docker: http://blogs.msdn.com/b/webdev/archive/2015/01/14/running-asp-net-5-applications-in-linux-containers-with-docker.aspx. You can also go to the official installation instructions for a guide on how to install DNVM manually.
 
 ### Windows
+
+> Official instructions: http://docs.asp.net/en/latest/getting-started/installing-on-windows.html
 
 To get started on Windows you need to install the latest preview of Visual Studio 2015. This will also install [DNVM](https://github.com/aspnet/dnvm) and the associated executables.
 
@@ -77,3 +83,5 @@ __`check`__ - Run static code analysis on built assemblies using [Gendarme](http
 ---
 
 Copyright &copy; 2015 [Kasper Kronborg Isager](https://github.com/kasperisager). Licensed under the terms of the [MIT license](LICENSE.md).
+
+<!-- Links -->

@@ -48,7 +48,7 @@ source dnvm.sh
 
 ### Windows
 
-> TODO
+To get started on Windows you need to install the latest preview of Visual Studio 2015. This will also install [DNVM](https://github.com/aspnet/dnvm) and the associated executables.
 
 ## Building
 

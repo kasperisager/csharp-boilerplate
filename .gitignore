@@ -5,11 +5,9 @@ build/**
 packages/**
 docs/**
 
-# Keep the .gitkeep files from the above folders to ensure that they're checked
-# into VCS without contents.
-!build/.gitkeep
-!packages/.gitkeep
-!docs/.gitkeep
+# Make sure that .gitkeep files in even ignored directories are checked into
+# VCS.
+!**/.gitkeep
 
 # Make sure that EXEs and DLLs from libraries are checked into VCS. This is in
 # case they're ignored globally.

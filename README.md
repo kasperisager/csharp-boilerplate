@@ -1,6 +1,6 @@
 # C# Boilerplate
 
-Cross-platform [DNX](https://github.com/aspnet/dnx)-based C# boilerplate configured with [xUnit](https://github.com/xunit/xunit), [Doxygen](http://www.stack.nl/~dimitri/doxygen/), and [Gendarme](http://www.mono-project.com/docs/tools+libraries/tools/gendarme/).
+> Cross-platform [DNX](https://github.com/aspnet/dnx)-based C# boilerplate configured with [xUnit](https://github.com/xunit/xunit), [Doxygen](http://www.stack.nl/~dimitri/doxygen/), and [Gendarme](http://www.mono-project.com/docs/tools+libraries/tools/gendarme/).
 
 ## Legend
 

@@ -1,5 +1,18 @@
 {
   "version": "1.0.0",
+  "description": "An example C# test suit.",
+  "authors": [
+    "Kasper Kronborg Isager <kasperisager@gmail.com>"
+  ],
+  "tags": [
+    "C#",
+    "DNX",
+    "ASP.NET",
+    "Boilerplate",
+    "Example"
+  ],
+  "projectUrl": "https://github.com/kasperisager/csharp-boilerplate",
+  "licenseUrl": "https://github.com/kasperisager/csharp-boilerplate/blob/master/LICENSE.md",
 
   "dependencies": {
     "Application": "1.0.0",

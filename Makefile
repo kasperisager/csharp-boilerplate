@@ -46,7 +46,10 @@ DOXYGEN_CONFIG = ${CONFIG}/Doxyfile
 # `global.json` - The global DNX configuration file.
 # `{src,test}/**/project.json` - The individual DNX project manifests.
 ${PACKAGES}: global.json ${SRC}/*/project.json ${TEST}/*/project.json
-	@for project in {${SRC},${TEST}}/*; do \
+	@for project in ${SRC}/*; do \
+		${DNU} restore --quiet $$project; \
+	done
+	@for project in ${TEST}/*; do \
 		${DNU} restore --quiet $$project; \
 	done
 
@@ -56,7 +59,10 @@ ${PACKAGES}: global.json ${SRC}/*/project.json ${TEST}/*/project.json
 # `packages` - The installed NuGet packages for all DNX projects.
 # `{src,test}/**/*` - Source and test files.
 ${BUILD}/Debug: ${PACKAGES} ${SRC}/**/* ${TEST}/**/*
-	@for project in {${SRC},${TEST}}/*; do \
+	@for project in ${SRC}/*; do \
+		${DNU} build --quiet --out ${BUILD} --configuration Debug $$project; \
+	done
+	@for project in ${TEST}/*; do \
 		${DNU} build --quiet --out ${BUILD} --configuration Debug $$project; \
 	done
 

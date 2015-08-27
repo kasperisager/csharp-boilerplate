@@ -7,5 +7,5 @@ install:
   - dnvm upgrade
 
 script:
-  - make test
-  - make check
+  - make test -B
+  - make check -B

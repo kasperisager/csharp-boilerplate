@@ -77,7 +77,7 @@ ${BUILD}/Release: ${PACKAGES} ${SRC}/**/*
 	done
 
 # Alias for building application assemblies for release.
-build: build/Release
+build: ${BUILD}/Release
 
 # Generate API documentation using Doxygen.
 #
@@ -92,14 +92,18 @@ ${DOCS}: ${SRC}/**/* ${DOXYGEN_CONFIG}
 # Dependencies:
 # `packages` - The installed NuGet packages for all DNX projects.
 run: ${PACKAGES}
-	@${DNX} --lib ${LIB} ${SRC}/* run
+	@for project in ${SRC}/*; do \
+		(cd $$project && ${DNX} --lib ${LIB} run); \
+	done
 
 # Run test specifications using DNX.
 #
 # Dependencies:
 # `packages` - The installed NuGet packages for all DNX projects.
 test: ${PACKAGES}
-	@${DNX} --lib ${LIB} ${TEST}/* test
+	@for project in ${TEST}/*; do \
+		(cd $$project && ${DNX} --lib ${LIB} test); \
+	done
 
 # Run static code analysis on built assemblies using Gendarme.
 #

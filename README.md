@@ -1,6 +1,6 @@
 # C# Boilerplate
 
-> Cross-platform [DNX](https://github.com/aspnet/dnx)-based C# boilerplate configured with [xUnit](https://github.com/xunit/xunit), [Doxygen](http://www.stack.nl/~dimitri/doxygen/), and [Gendarme](http://www.mono-project.com/docs/tools+libraries/tools/gendarme/).
+> Cross-platform [DNX](https://github.com/aspnet/dnx)-based C# boilerplate configured with [xUnit](https://github.com/xunit/xunit).
 
 [![Travis](https://img.shields.io/travis/kasperisager/csharp-boilerplate.svg)](https://travis-ci.org/kasperisager/csharp-boilerplate)
 
@@ -16,7 +16,6 @@ Folder / File | Description
 [`lib/`](lib) | This folder contains any third-party libraries not available via the package manager.
 [`build/`](build) | This folder contains all the built assemblies from your applications and test specifications.
 [`packages/`](packages) | This folder contains all packages installed by the package manager.
-[`config/`](config) | This folder contains all the configuration files required by things like the build system.
 [`.editorconfig`](.editorconfig) | This file describes the editor formatting settings to be used in editors and IDEs.
 [`Makefile`](Makefile) | This file describes all the build system targets available for your project.
 [`global.json`](global.json) | This file is the global project manifest and defines the different project sources and runtime frameworks.
@@ -24,7 +23,6 @@ Folder / File | Description
 ## Requirements
 
 - [DNVM](https://github.com/aspnet/dnvm) - .NET SDK Manager
-- [Doxygen](http://www.stack.nl/~dimitri/doxygen/) - Documentation generator
 
 ## Installation
 
@@ -36,7 +34,6 @@ First off, make sure you have [Homebrew](http://brew.sh/) installed. Then instal
 
 ```sh
 $ brew install mono
-$ brew install doxygen
 $ brew install aspnet/dnx/dnvm
 ```
 
@@ -74,16 +71,10 @@ __`packages`__ - Install required [NuGet](https://www.nuget.org/) packages using
 
 __`build`__ - Build assemblies for applications and test specifications using [DNU](https://github.com/aspnet/Home/wiki/DNX-utility).
 
-__`docs`__ - Generate API documentation using [Doxygen](http://www.stack.nl/~dimitri/doxygen/).
-
 __`run`__ - Run applications using [DNX](https://github.com/aspnet/dnx).
 
 __`test`__ - Run test specifications using [DNX](https://github.com/aspnet/dnx) and [xUnit](http://xunit.github.io/).
 
-__`check`__ - Run static code analysis on built assemblies using [Gendarme](http://www.mono-project.com/docs/tools+libraries/tools/gendarme/).
-
 ---
 
 Copyright &copy; 2015 [Kasper Kronborg Isager](https://github.com/kasperisager). Licensed under the terms of the [MIT license](LICENSE.md).
-
-<!-- Links -->

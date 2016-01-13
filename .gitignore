@@ -3,7 +3,6 @@
 # we don't outright ignore the folders themselves.
 build/**
 packages/**
-docs/**
 
 # Make sure that .gitkeep files in even ignored directories are checked into
 # VCS.

@@ -10,8 +10,6 @@ TEST = test
 BUILD = build
 PACKAGES = packages
 LIB = lib
-DOCS = docs
-CONFIG = config
 
 ################################################################################
 # Target configuration
@@ -22,14 +20,6 @@ CONFIG = config
 # Compilers and runtimes.
 DNX = dnx
 DNU = dnu
-
-# Gendarme configuration.
-GENDARME = ${DNX} ${PACKAGES}/Mono.Gendarme/*/tools/gendarme.exe
-GENDARME_CONFIG = ${CONFIG}/Gendarme.xml
-
-# Doxygen configuration.
-DOXYGEN = doxygen
-DOXYGEN_CONFIG = ${CONFIG}/Doxyfile
 
 ################################################################################
 # Targets
@@ -79,14 +69,6 @@ ${BUILD}/Release: ${PACKAGES} ${SRC}/**/*
 # Alias for building application assemblies for release.
 build: ${BUILD}/Release
 
-# Generate API documentation using Doxygen.
-#
-# Dependencies:
-# `src/**/*` - Source files.
-# `config/Doxyfile` - The Doxygen configuration file.
-${DOCS}: ${SRC}/**/* ${DOXYGEN_CONFIG}
-	@${DOXYGEN} ${DOXYGEN_CONFIG}
-
 # Run applications using DNX.
 #
 # Dependencies:
@@ -105,12 +87,5 @@ test: ${PACKAGES}
 		(cd $$project && ${DNX} --lib ${LIB} test); \
 	done
 
-# Run static code analysis on built assemblies using Gendarme.
-#
-# Dependencies:
-# `build/Debug` - Built application and test specification assemblies.
-check: ${BUILD}/Debug
-	@${GENDARME} ${BUILD}/Debug/*/*.dll --config ${GENDARME_CONFIG}
-
 # https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html
-.PHONY: build run test check
+.PHONY: build run test

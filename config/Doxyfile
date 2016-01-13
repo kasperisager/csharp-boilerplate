@@ -1,5 +1,0 @@
-PROJECT_NAME = "C# Boilerplate"
-
-INPUT = src/
-RECURSIVE = YES
-OUTPUT_DIRECTORY = docs

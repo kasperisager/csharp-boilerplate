@@ -1,27 +1,18 @@
-/**
- * Copyright (C) 2015 Kasper Kronborg Isager.
- */
+/// Copyright (C) 2015 Kasper Kronborg Isager.
 
 using System;
 
 namespace Application.Foo {
-  /**
-   * Example class included for the purpose of demonstration.
-   */
+  /// <summary>Example class included for the purpose of demonstration.</summary>
   public class Bar {
-    /**
-     * A thingy that can store a string.
-     */
+    /// <summary>A thingy that can store a string.</summary>
     public string Thing {
       get;
       set;
     }
 
-    /**
-     * Write a message to the console.
-     *
-     * @param message The message to write to the console.
-     */
+    /// <summary>Write a message to the console.</summary>
+    /// <param name="message">The message to write to the console.</param>
     public void Baz(string message) {
       Console.WriteLine(message);
     }

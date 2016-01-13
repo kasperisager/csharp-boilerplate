@@ -10,7 +10,6 @@ namespace Application.Foo {
     public void Assertion() {
       Bar bar = new Bar();
       bar.Thing = "Hello World!";
-
       Assert.NotNull(bar);
       Assert.Equal("Hello World!", bar.Thing);
     }

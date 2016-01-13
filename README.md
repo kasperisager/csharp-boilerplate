@@ -77,4 +77,4 @@ __`test`__ - Run test specifications using [DNX](https://github.com/aspnet/dnx) 
 
 ---
 
-Copyright &copy; 2015 [Kasper Kronborg Isager](https://github.com/kasperisager). Licensed under the terms of the [MIT license](LICENSE.md).
+Copyright &copy; 2015-2016 [Kasper Kronborg Isager](https://github.com/kasperisager). Licensed under the terms of the [MIT license](LICENSE.md).
